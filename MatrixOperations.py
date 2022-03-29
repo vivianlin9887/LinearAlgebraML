@@ -7,6 +7,7 @@ A = np.array([[2, 1], [3, 0], [0, 4]])
 B = np.array([[1, 2], [-3, 1], [1, 2]])
 C = np.array([[3, 0], [1, 5]])
 D = np.array([[5, 3], [2, 4]])
+E = np.arange(9).reshape(3, 3)
 
 
 def main():
@@ -29,6 +30,8 @@ def main():
     print("=" * 40)
 
     print(f"Finding RREF of Matrix with Sympy: \n{sym.Matrix(A).rref()}")
+    print(f"Get the diagonal values of matrix E: \n{np.diag(E)}")
+    print(f"Construct diagonal array from that extracted: \n{np.diag(np.diag(E))}")
 
 
 if __name__ == '__main__':
